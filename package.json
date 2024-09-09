@@ -1,5 +1,5 @@
 {
-  "name": "strapi-provider-email-msgraph",
+  "name": "strapi-email-msgraph",
   "version": "1.0.0",
   "description": "This package is forked off (EXTERNAL FORK) from: mondago/strapi-provider-email-msgraph",
   "main": "./dist",

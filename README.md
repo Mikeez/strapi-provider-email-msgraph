@@ -1,5 +1,4 @@
-This package is forked off (EXTERNAL FORK) from: [mondago](https://github.com/mondago/strapi-provider-email-msgraph)
-I do not take any credits
+This package is externally forked off: [mondago](https://github.com/mondago/strapi-provider-email-msgraph) - I do not take any credits
 
 # strapi-provider-email-msgraph
 
@@ -15,12 +14,12 @@ An app registration for the tenant with Mail.Send permission is required. You'll
 
 ## Installation
 
-This package is scoped so you'll need to add an alias to your package.json. Replace `<version>` with the version number of your choice (eg 2.0.0).
+This package is scoped so you'll need to add an alias to your package.json.
 
 ```json
   "dependencies": {
     ...
-    "strapi-provider-email-msgraph": "npm:@mikeez/strapi-provider-email-msgraph@<version>"
+    "strapi-provider-email-msgraph": "npm:strapi-email-msgraph"
     ...
   }
 ```
