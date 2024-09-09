@@ -1,0 +1,33 @@
+{
+  "name": "strapi-provider-email-msgraph",
+  "version": "1.0.0",
+  "description": "This package is forked off (EXTERNAL FORK) from: mondago/strapi-provider-email-msgraph",
+  "main": "./dist",
+  "types": "./dist/index.d.ts",
+  "directories": {
+    "dist": "./dist"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "dotenv": "^16.4.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@azure/identity": "^4.4.1",
+    "@microsoft/microsoft-graph-client": "^3.0.7"
+  }
+}
