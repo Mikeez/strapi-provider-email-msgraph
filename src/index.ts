@@ -63,6 +63,16 @@ export = {
                             address: email,
                         },
                     })),
+                    ccRecipients: options.cc ? options.cc.map(email => ({
+                        emailAddress: {
+                            address: email,
+                        },
+                    })) : [],
+                    bccRecipients: options.bcc ? options.bcc.map(email => ({
+                        emailAddress: {
+                            address: email,
+                        },
+                    })) : [],
                     body: options.html
                         ? {
                             content: options.html,
