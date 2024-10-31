@@ -2,6 +2,10 @@ interface Settings {
     defaultFrom: string;
     defaultReplyTo: string;
 }
+interface Attachment {
+    name: string;
+    contentBytes: string;
+}
 interface SendOptions {
     from?: string;
     to: string[];
@@ -11,6 +15,7 @@ interface SendOptions {
     subject: string;
     text: string;
     html?: string;
+    attachments?: Attachment[];
     [key: string]: unknown;
 }
 interface ProviderOptions {

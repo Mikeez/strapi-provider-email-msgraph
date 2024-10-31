@@ -11,6 +11,11 @@ interface Settings {
     defaultReplyTo: string;
 }
 
+interface Attachment {
+    name: string;
+    contentBytes: string; // Base64 encoded content
+}
+
 interface SendOptions {
     from?: string;
     to: string[];
@@ -20,6 +25,7 @@ interface SendOptions {
     subject: string;
     text: string;
     html?: string;
+    attachments?: Attachment[];
     [key: string]: unknown;
 }
 
@@ -82,7 +88,15 @@ export = {
                             content: options.text,
                             contentType: 'text',
                         },
+                        attachment: options.attachments && options.attachments.length
+                        ? options.attachments.map(attachment => ({
+                            '@odata.type': '#microsoft.graph.fileAttachment',
+                            name: attachment.name,
+                            contentBytes: attachment.contentBytes,
+                        }))
+                        : undefined
                 }
+
                 await client.api(`/users/${from}/sendMail`).post({ message: mail });
             }
         }
