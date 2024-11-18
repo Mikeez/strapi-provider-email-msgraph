@@ -88,7 +88,7 @@ export = {
                             content: options.text,
                             contentType: 'text',
                         },
-                        attachment: options.attachments && options.attachments.length
+                        attachments: options.attachments && options.attachments.length
                         ? options.attachments.map(attachment => ({
                             '@odata.type': '#microsoft.graph.fileAttachment',
                             name: attachment.name,
