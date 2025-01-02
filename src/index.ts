@@ -11,7 +11,7 @@ interface Settings {
     defaultReplyTo: string;
 }
 
-interface Attachment {
+interface Attachments {
     name: string;
     contentBytes: string; // Base64 encoded content
 }
@@ -25,7 +25,7 @@ interface SendOptions {
     subject: string;
     text: string;
     html?: string;
-    attachments?: Attachment[];
+    attachments?: Attachments[];
     [key: string]: unknown;
 }
 

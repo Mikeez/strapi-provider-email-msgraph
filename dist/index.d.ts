@@ -2,7 +2,7 @@ interface Settings {
     defaultFrom: string;
     defaultReplyTo: string;
 }
-interface Attachment {
+interface Attachments {
     name: string;
     contentBytes: string;
 }
@@ -15,7 +15,7 @@ interface SendOptions {
     subject: string;
     text: string;
     html?: string;
-    attachments?: Attachment[];
+    attachments?: Attachments[];
     [key: string]: unknown;
 }
 interface ProviderOptions {
